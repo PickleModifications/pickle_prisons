@@ -1,4 +1,4 @@
-<div align='center'><img src='https://github.com/PickleModifications/pickle_prisons/assets/111543470/4d581149-0128-46ab-a48e-b08246dfbfd6'/></div>
+<div align='center'><img src='https://github.com/PickleModifications/pickle_prisons/assets/111543470/572c7852-a184-454c-ac20-1f809f785ef0'/></div>
 <div align='center'><h3><a href='https://picklemods.com/'>More Information & Scripts can be found here!</a></h3></div>
 
 ## Preview
