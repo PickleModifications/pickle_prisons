@@ -13,7 +13,7 @@ end
 function GetPlayersInArea(coords, radius)
     local coords = coords or GetEntityCoords(PlayerPedId())
     local radius = radius or 3.0
-    local list = ESX.Game.GetPlayersFromCoords(coords, radius)
+    local list = QBCore.Functions.GetPlayersFromCoords(coords, radius)
     local players = {}
     for _, player in pairs(list) do 
         if player ~= PlayerId() then
