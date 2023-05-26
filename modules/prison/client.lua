@@ -226,6 +226,7 @@ AddEventHandler('onResourceStart', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
       return
     end
+    Wait(1000)
     TriggerServerEvent("pickle_prisons:initializePlayer")
 end)
 
