@@ -20,6 +20,12 @@ function AddTargetZone(coords, radius, options)
     repeat
         index = "prison_coord_" .. math.random(1, 999999999)
     until not Zones[index]
+    for i=1, #options do 
+        if options[i].onSelect then
+            options[i].action = options[i].onSelect
+            options[i].onSelect = nil
+        end
+    end
     exports['qb-target']:AddCircleZone(index, coords, radius, {name = index}, {
         options = options
     })

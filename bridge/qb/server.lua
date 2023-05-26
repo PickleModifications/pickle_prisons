@@ -30,12 +30,12 @@ end)
 
 function AddMoney(source, count)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    xPlayer.Functions.AddMoney(count)
+    xPlayer.Functions.AddMoney('cash',count)
 end
 
 function RemoveMoney(source, count)
     local xPlayer = QBCore.Functions.GetPlayer(source)
-    xPlayer.Functions.RemoveMoney(count)
+    xPlayer.Functions.RemoveMoney('cash',count)
 end
 
 function GetMoney(source)
