@@ -15,11 +15,13 @@ function ShowNotification(target, text)
 end
 
 function GetIdentifier(source)
+    local source = tonumber(source)
     local xPlayer = QBCore.Functions.GetPlayer(source).PlayerData
     return xPlayer.citizenid 
 end
 
 function SetPlayerMetadata(source, key, data)
+    local source = tonumber(source)
     QBCore.Functions.GetPlayer(source).Functions.SetMetaData(key, data)
 end
 
@@ -29,16 +31,19 @@ RegisterNetEvent("hospital:server:SetDeathStatus", function(status)
 end)
 
 function AddMoney(source, count)
+    local source = tonumber(source)
     local xPlayer = QBCore.Functions.GetPlayer(source)
     xPlayer.Functions.AddMoney('cash',count)
 end
 
 function RemoveMoney(source, count)
+    local source = tonumber(source)
     local xPlayer = QBCore.Functions.GetPlayer(source)
     xPlayer.Functions.RemoveMoney('cash',count)
 end
 
 function GetMoney(source)
+    local source = tonumber(source)
     local xPlayer = QBCore.Functions.GetPlayer(source)
     return xPlayer.PlayerData.money.cash
 end
@@ -72,6 +77,7 @@ CreateThread(function()
     Inventory.Ready = false
 
     Inventory.CanCarryItem = function(source, name, count)
+        local source = tonumber(source)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         local weight = QBCore.Player.GetTotalWeight(xPlayer.PlayerData.items)
         local item = QBCore.Shared.Items[name:lower()]
@@ -79,6 +85,7 @@ CreateThread(function()
     end
 
     Inventory.GetInventory = function(source)
+        local source = tonumber(source)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         local items = {}
         local data = xPlayer.PlayerData.items
@@ -95,30 +102,36 @@ CreateThread(function()
     end
 
     Inventory.AddItem = function(source, name, count, metadata) -- Metadata is not required.
+        local source = tonumber(source)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         xPlayer.Functions.AddItem(name, count, nil, metadata)
     end
 
     Inventory.RemoveItem = function(source, name, count)
+        local source = tonumber(source)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         xPlayer.Functions.RemoveItem(name, count)
     end
 
     Inventory.AddWeapon = function(source, name, count, metadata) -- Metadata is not required.
+        local source = tonumber(source)
         Inventory.AddItem(source, name, count, metadata)
     end
 
     Inventory.RemoveWeapon = function(source, name, count)
+        local source = tonumber(source)
         Inventory.RemoveItem(source, name, count, metadata)
     end
 
     Inventory.GetItemCount = function(source, name)
+        local source = tonumber(source)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         local item = xPlayer.Functions.GetItemByName(name)
         return item and item.amount or 0
     end
 
     Inventory.HasWeapon = function(source, name, count)
+        local source = tonumber(source)
         return (Inventory.GetItemCount(source, name) > 0)
     end
 
