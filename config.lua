@@ -570,7 +570,7 @@ Config.Prisons = {
                 model = {hash = `s_m_y_prisoner_01`},
                 catalog = {
                     {
-                        name = "WEAPON_SWITCHBLADE",
+                        name = "weapon_switchblade",
                         description = "A great tool to take out your enemies.",
                         amount = 1,
                         required = {
