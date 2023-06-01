@@ -27,6 +27,8 @@ Config.EnableSneakout = false -- When set to true, anytime the player is outside
 
 Config.XPEnabled = true -- When set to true, this will enable Pickle's XP compatibility, and enable xp rewards.
 
+Config.Job = 'prisoner'
+
 Config.XPCategories = { -- Registered XP Types for Pickle's XP.
     ["strength"] = {
         label = "Strength", 
@@ -568,7 +570,7 @@ Config.Prisons = {
                 model = {hash = `s_m_y_prisoner_01`},
                 catalog = {
                     {
-                        name = "WEAPON_SWITCHBLADE",
+                        name = "weapon_switchblade",
                         description = "A great tool to take out your enemies.",
                         amount = 1,
                         required = {
