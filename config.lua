@@ -27,6 +27,8 @@ Config.EnableSneakout = false -- When set to true, anytime the player is outside
 
 Config.XPEnabled = true -- When set to true, this will enable Pickle's XP compatibility, and enable xp rewards.
 
+Config.Job = 'prisoner'
+
 Config.XPCategories = { -- Registered XP Types for Pickle's XP.
     ["strength"] = {
         label = "Strength", 
