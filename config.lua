@@ -393,12 +393,12 @@ Config.Prisons = {
                 heading = 211.9629
             }, 
             enter = {
-                coords = vector3(-472.8028, 2089.3516, 120.0673),
-                heading = 195.9083
+                coords = vector3(-481.46, 1895.07, 119.67),
+                heading = 92.11
             },
             leave = {
-                coords = vector3(-595.8946, 2088.1353, 131.3309),
-                heading = 43.9493
+                coords = vector3(-565.17, 1886.14, 123.04),
+                heading = 295.75
             },
             finish = {
                 coords = vector3(1947.4604, 2683.6985, 42.7468),
