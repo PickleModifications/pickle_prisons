@@ -86,7 +86,7 @@ function JailPlayer(source, time, index, noSave)
         index = index,
         time = time,
         inventory = TakeInventory(source),
-        sentence_date = os.time(),
+        sentence_date = os.time() + (time * 60),
     }
     SetPlayerMetadata(source, "injail", time)
     TriggerClientEvent("pickle_prisons:jailPlayer", source, Prisoners[source])
@@ -183,7 +183,7 @@ RegisterNetEvent("pickle_prisons:initializePlayer", function()
         if result then 
             local time = result.time
             if Config.ServeTimeOffline then
-                time = (os.time() - result.sentence_date)
+                  time = math.ceil((result.sentence_date - os.time()) / 60)
             end
             Prisoners[source] = {
                 identifier = result.identifier,
