@@ -74,6 +74,7 @@ function TakeInventory(source)
     return inventory
 end
 
+-- Define the JailPlayer function
 function JailPlayer(source, time, index, noSave)
     if Prisoners[source] then return end
     local index = index or "default"
@@ -99,6 +100,9 @@ function JailPlayer(source, time, index, noSave)
         ["@sentence_date"] = Prisoners[source].sentence_date,
     })
 end
+
+-- Export the JailPlayer function
+exports("JailPlayer", JailPlayer)
 
 function UnjailPlayer(source, breakout)
     local data = Prisoners[source]
