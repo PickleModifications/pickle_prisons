@@ -221,7 +221,6 @@ end)
 
 AddEventHandler("playerDropped", function()
     local source = source
-    local identifier = GetIdentifier(source)
     if not Prisoners[source] then return end
     UpdatePrisonTime(source, Prisoners[source].time)
     Prisoners[source] = nil
