@@ -1,0 +1,11 @@
+This config is set up for Prompt’s Prison. 
+
+I have done all 135 cells and all the coordinates, including the prompts escape tunnel.
+
+And the ox_doorlock is set up for Prompt’s Prison. 
+I have configured all 345 doors from Bolingbroke Prison, including cell doors and more. 
+
+
+Note: There will be no support for the door lock or prison config. 
+This is to help people who want a more immersive prison experience but don't want to set up all the rooms and doors themselves. 
+The rest is up to you to customize as you like.
